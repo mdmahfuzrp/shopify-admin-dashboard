@@ -59,10 +59,9 @@ const Login = () => {
     const handleGithubLogin = () => {
         handleGithubSignIn()
             .then(result => {
-                const loggedUser = result.user;
                 Swal.fire({
                     title: 'Hey, Sanmeet!',
-                    text: 'Gihub Login Successful',
+                    text: 'Github Login Successful',
                     icon: 'success',
                     confirmButtonText: 'OK'
                 })
@@ -85,7 +84,7 @@ const Login = () => {
                         <input type="email" name="email" placeholder="Enter email" required className="input input-bordered w-full focus:outline-none" />
                     </div>
                     <div className="mt-2">
-                        <input type="password" name="password" placeholder="Enter email" required className="input input-bordered w-full focus:outline-none" />
+                        <input type="password" name="password" placeholder="Password" required className="input input-bordered w-full focus:outline-none" />
                     </div>
                     <input type="submit" className="btn btn-block hover:bg-[green] hover:bg-opacity-50 bg-[green] bg-opacity-60 text-white font-medium text-xl mt-1" value="Login" />
                 </form>
@@ -96,7 +95,7 @@ const Login = () => {
                 </button>
                 <button onClick={handleGithubLogin} className="border rounded-md py-3 text-center font-medium mt-3 cursor-pointer w-full flex items-center justify-center">
                     <FaGithub size={23} className="mx-2" />
-                    Continue with Google
+                    Continue with Github
                 </button>
             </div>
         </div>
